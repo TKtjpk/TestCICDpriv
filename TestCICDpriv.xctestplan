@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "6F572F8C-8FDD-49C5-A4C1-968BD084940D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TestCICDpriv.xcodeproj",
+      "identifier" : "5E9925122AE191DD003299B8",
+      "name" : "TestCICDpriv"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TestCICDpriv.xcodeproj",
+        "identifier" : "5E9925222AE191E0003299B8",
+        "name" : "TestCICDprivTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TestCICDpriv.xcodeproj",
+        "identifier" : "5E99252C2AE191E0003299B8",
+        "name" : "TestCICDprivUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
