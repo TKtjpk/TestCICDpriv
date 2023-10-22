@@ -21,12 +21,20 @@ final class TestCICDprivTests: XCTestCase {
     }
 
     func testExample() throws {
-        XCTAssertEqual(testClass.test(), "test")
+        
+        //XCTAssertEqual(testClass.test2(inne: 10), 123)
+        XCTAssertEqual(testClass.test3(), 6.77)
+        //XCTAssertTrue(testClass.test2(inne: 10).isMultiple(of: 123))
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    }
+    
+    func testAsync() async {
+        let res = await testClass.test(some: 10, someS: "")
+        XCTAssertEqual(res, "test")
     }
 
     func testPerformanceExample() throws {
