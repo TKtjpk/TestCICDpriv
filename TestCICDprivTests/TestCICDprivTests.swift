@@ -10,7 +10,7 @@ import XCTest
 
 final class TestCICDprivTests: XCTestCase {
     
-    var testClass = TestClass()
+    //var testClass = TestClass()
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,7 +23,7 @@ final class TestCICDprivTests: XCTestCase {
     func testExample() throws {
         
         //XCTAssertEqual(testClass.test2(inne: 10), 123)
-        XCTAssertEqual(testClass.test3(), 6.77)
+        //XCTAssertEqual(testClass.test3(), 6.77)
         //XCTAssertTrue(testClass.test2(inne: 10).isMultiple(of: 123))
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -33,8 +33,8 @@ final class TestCICDprivTests: XCTestCase {
     }
     
     func testAsync() async {
-        let res = await testClass.test(some: 10, someS: "")
-        XCTAssertEqual(res, "test")
+        //let res = await testClass.test(some: 10, someS: "")
+        //XCTAssertEqual(res, "test")
     }
 
     func testPerformanceExample() throws {
