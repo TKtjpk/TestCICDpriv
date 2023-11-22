@@ -17,6 +17,7 @@ struct SingleTempView: View {
                     .clipShape(.rect(cornerRadii: .init(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
                     .shadow(radius: 4, x: -5, y: 5)
                 Text(scale + ": ")
+                    .foregroundStyle(.black)
             }
             .frame( height: 40)
             Spacer()
@@ -28,6 +29,7 @@ struct SingleTempView: View {
                 TextField("Temperature:", text: $value)
                     .padding(EdgeInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10)))
                     .keyboardType(.decimalPad)
+                    .foregroundStyle(.black)
             }
             .frame(height: 40)
         }
