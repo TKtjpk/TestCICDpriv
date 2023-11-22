@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E09E8B52AE57F3200F5753D /* SomeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09E8B42AE57F3200F5753D /* SomeClass.swift */; };
 		5E9925172AE191DD003299B8 /* TestCICDprivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9925162AE191DD003299B8 /* TestCICDprivApp.swift */; };
 		5E9925192AE191DD003299B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9925182AE191DD003299B8 /* ContentView.swift */; };
 		5E99251B2AE191DF003299B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E99251A2AE191DF003299B8 /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E09E8B42AE57F3200F5753D /* SomeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeClass.swift; sourceTree = "<group>"; };
 		5E09E8B62AE581CA00F5753D /* TestCICDpriv.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestCICDpriv.xctestplan; sourceTree = "<group>"; };
 		5E09E8B72AE5888700F5753D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E9925132AE191DD003299B8 /* TestCICDpriv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCICDpriv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +97,11 @@
 		5E9925152AE191DD003299B8 /* TestCICDpriv */ = {
 			isa = PBXGroup;
 			children = (
-				5E09E8B72AE5888700F5753D /* Info.plist */,
 				5E9925162AE191DD003299B8 /* TestCICDprivApp.swift */,
-				5E9925182AE191DD003299B8 /* ContentView.swift */,
+				5EC6D7EE2B0E830E004D2FD9 /* View */,
+				5E09E8B72AE5888700F5753D /* Info.plist */,
 				5E99251A2AE191DF003299B8 /* Assets.xcassets */,
 				5E99251C2AE191DF003299B8 /* Preview Content */,
-				5E09E8B42AE57F3200F5753D /* SomeClass.swift */,
 			);
 			path = TestCICDpriv;
 			sourceTree = "<group>";
@@ -132,6 +129,14 @@
 				5E9925332AE191E0003299B8 /* TestCICDprivUITestsLaunchTests.swift */,
 			);
 			path = TestCICDprivUITests;
+			sourceTree = "<group>";
+		};
+		5EC6D7EE2B0E830E004D2FD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E9925182AE191DD003299B8 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +271,6 @@
 			files = (
 				5E9925192AE191DD003299B8 /* ContentView.swift in Sources */,
 				5E9925172AE191DD003299B8 /* TestCICDprivApp.swift in Sources */,
-				5E09E8B52AE57F3200F5753D /* SomeClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
