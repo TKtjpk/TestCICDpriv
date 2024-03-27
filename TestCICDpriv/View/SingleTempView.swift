@@ -28,7 +28,7 @@ struct SingleTempView: View {
                     .shadow(radius: 4, x: -5, y: 5)
                 TextField("Temperature:", text: $value)
                     .padding(EdgeInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10)))
-                    .keyboardType(.decimalPad)
+                    .keyboardType(.numbersAndPunctuation)
                     .foregroundStyle(.black)
             }
             .frame(height: 40)

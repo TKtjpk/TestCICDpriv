@@ -25,7 +25,6 @@ struct ConverterView: View {
                     updatingC = false
                     updatingK = false
                 }
-                .keyboardType(.numberPad)
                 .onReceive(Just(Fahrenheit)) { _ in
                     
                     guard updatingF else { return }
@@ -44,7 +43,6 @@ struct ConverterView: View {
                     updatingC = true
                     updatingK = false
                 }
-                .keyboardType(.numberPad)
                 .onReceive(Just(Celsius)) { _ in
                     
                     guard updatingC else { return }
@@ -63,7 +61,6 @@ struct ConverterView: View {
                     updatingC = false
                     updatingK = true
                 }
-                .keyboardType(.numberPad)
                 .onReceive(Just(Kelvin)) { _ in
                     
                     guard updatingK else { return }
