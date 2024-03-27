@@ -14,7 +14,7 @@ let Definitions = ["Breakaway Coupling" : "Breakaway Coupling means an LNG bunke
                    "Emergency Release Coupling (ERC)":"Emergency Release Coupling (ERC) ERC means emergency release coupling; typically incorporates a dry-break feature to avoid unwanted LNG release. May be termed PERC for powered emergency release coupling.",
                    "Emergency Shutdown (ESD)":"A system that provides a positive means of quick release of the transfer system and safe isolation of receiving vessel from the supply source.",
                    "Flash Gas":"Boil-off Gas instantly generated during LNG transfer due to the warmer temperature of the receiving ship tanks, sudden pressure drop or friction.",
-                   "Gas Consuming Unit (GCU)":"A combustion engine (e. g. boiler) which is used to burn excessive Boil-Off gases.",
+                   "Gas Consuming Unit (GCU)":"A combustion engine (e.g. boiler) which is used to burn excessive Boil-Off gases.",
                    "Lower Explosive Limit (LEL)":"LEL means the lowest concentration (percentage) of a gas or a vapor in air capable of producing a flash of fire in presence of an ignition source.",
                    "LNG Containment System":"LNG Containment System is the arrangement for containment of LNG including, as applicable, a primary and secondary barrier, associated insulation and any intervening spaces, and adjacent structure if necessary for the support of those elements.",
                    "LNG Spraying":"LNG Spraying means the process whereby LNG liquid is sprayed into the top of a LNG tank to cool the vapor phase and the tank and thereby reduce pressure in the tank.",
