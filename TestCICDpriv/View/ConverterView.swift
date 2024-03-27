@@ -6,33 +6,74 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ConverterView: View {
     
-    @State var Fahrenheit = "0.00"
-    @State var Celsius = "-17.78"
-    @State var Kelvin = "255.37"
+    @State private var Fahrenheit = ""
+    @State private var Celsius = ""
+    @State private var Kelvin = ""
+    @State private var updatingF: Bool = false
+    @State private var updatingC: Bool = false
+    @State private var updatingK: Bool = false
+    
     var body: some View {
         VStack {
             SingleTempView(value: $Fahrenheit, scale: "Fahrenheit")
-                .onChange(of: Fahrenheit) { newValue in
-                    let dCelsius = Double(5) / Double(9) * ((Double(newValue) ?? 0.00) - 32)
-                    Celsius = String(format: "%.2f", dCelsius)
-                    let dKelvin = dCelsius + 273.15
-                    Kelvin = String(format: "%.2f", dKelvin)                }
+                .onTapGesture {
+                    updatingF = true
+                    updatingC = false
+                    updatingK = false
+                }
+                .keyboardType(.numberPad)
+                .onReceive(Just(Fahrenheit)) { _ in
+                    
+                    guard updatingF else { return }
+                    if let dFahrenheit = Double(Fahrenheit) {
+                        
+                        let dCelsius = Double(5) / Double(9) * ((Double(dFahrenheit)) - 32)
+                        let dKelvin = (Double(dCelsius) ) + 273.15
+                        
+                        Celsius = String(format: "%.2f", dCelsius)
+                        Kelvin = String(format: "%.2f", dKelvin)
+                    }
+                }
             SingleTempView(value: $Celsius, scale: "Celsius")
-                .onChange(of: Celsius) { newValue in
-                    let dFahrenheit = ((Double(newValue) ?? 0.00) * 9 / 5) + 32
-                    Fahrenheit = String(format: "%.2f", dFahrenheit)
-                    let dKelvin = (Double(newValue) ?? 0.00) + 273.15
-                    Kelvin = String(format: "%.2f", dKelvin)
+                .onTapGesture {
+                    updatingF = false
+                    updatingC = true
+                    updatingK = false
+                }
+                .keyboardType(.numberPad)
+                .onReceive(Just(Celsius)) { _ in
+                    
+                    guard updatingC else { return }
+                    if let dCelsius = Double(Celsius) {
+                        
+                        let dFahrenheit = ((Double(dCelsius) ) * 9 / 5) + 32
+                        let dKelvin = (Double(dCelsius) ) + 273.15
+                        
+                        Fahrenheit = String(format: "%.2f", dFahrenheit)
+                        Kelvin = String(format: "%.2f", dKelvin)
+                    }
                 }
             SingleTempView(value: $Kelvin, scale: "Kelvin")
-                .onChange(of: Kelvin) { newValue in
-                    let dCelsius = (Double(newValue) ?? 0.00) - 273.15
-                    Celsius = String(format: "%.2f", dCelsius)
-                    let dFahrenheit = ((Double(dCelsius) ) * 9 / 5) + 32
-                    Fahrenheit = String(format: "%.2f", dFahrenheit)
+                .onTapGesture {
+                    updatingF = false
+                    updatingC = false
+                    updatingK = true
+                }
+                .keyboardType(.numberPad)
+                .onReceive(Just(Kelvin)) { _ in
+                    
+                    guard updatingK else { return }
+                    if let dKelvin = Double(Kelvin) {
+                        let dCelsius = (Double(Kelvin) ?? 0.00) - 273.15
+                        let dFahrenheit = ((Double(dCelsius) ) * 9 / 5) + 32
+                        
+                        Fahrenheit = String(format: "%.2f", dFahrenheit)
+                        Celsius = String(format: "%.2f", dCelsius)
+                    }
                 }
         }
     }
